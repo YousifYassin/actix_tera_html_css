@@ -1,0 +1,8 @@
+[package]
+name = "actix_tera_html_css"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+actix-web = "4.10.2"
+tera = { version = "1.20.0", default-features = false }
