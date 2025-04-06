@@ -28,3 +28,14 @@ pub async fn meta_tags(tera: web::Data<Arc<Tera>>) -> impl Responder {
         .expect("unable to render the page");
     HttpResponse::Ok().body(rendered)
 }
+
+pub async fn typography(tera: web::Data<Arc<Tera>>) -> impl Responder {
+    let mut context: Context = Context::new();
+    let the_range: Vec<i32> = (1..=6).into_iter().collect();
+    context.insert("title", "Headings, Paragraph, Typography");
+    context.insert("numbers", &the_range);
+    let rendered = tera
+        .render("04_typography.html", &context)
+        .expect("Unable to render the page");
+    HttpResponse::Ok().body(rendered)
+}

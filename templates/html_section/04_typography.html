@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/src/css/style.css">
+  <title>{{title}}</title>
+</head>
+
+<body>
+  <!-- Heading -->
+  {% for num in numbers %}
+  <h{{num}}> Heading {{num}} </h{{num}}>
+  {% endfor %}
+
+  <!-- paragraph -->
+  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.
+    In id cursus mi pretium tellus duis convallis. <strong>Tempus leo eu aenean sed diam urna tempor.</strong> Pulvinar
+    vivamus fringilla
+    lacus nec metus bibendum egestas. <em>Iaculis massa nisl malesuada lacinia integer nunc posuere.</em> Ut hendrerit
+    semper vel
+    class aptent taciti sociosqu.
+    <!-- Break line -->
+    <br> <br> <br> Ad litora torquent per conubia nostra inceptos himenaeos.
+
+    Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.
+    In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla
+    lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel
+    class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+    <hr>
+    Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.
+    In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla
+    lacus nec <del> bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere.</del> Ut hendrerit
+    semper vel
+    class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+  </p>
+</body>
+
+</html>
