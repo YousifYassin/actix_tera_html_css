@@ -39,3 +39,12 @@ pub async fn typography(tera: web::Data<Arc<Tera>>) -> impl Responder {
         .expect("Unable to render the page");
     HttpResponse::Ok().body(rendered)
 }
+
+pub async fn links_images(tera: web::Data<Arc<Tera>>) -> impl Responder {
+    let mut context: Context = Context::new();
+    context.insert("title", "Links and images");
+    let rendered: String = tera
+        .render("05_links_images.html", &context)
+        .expect("Unable to render the page");
+    HttpResponse::Ok().body(rendered)
+}
