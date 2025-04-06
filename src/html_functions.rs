@@ -14,9 +14,17 @@ pub async fn home_page(tera: web::Data<Arc<Tera>>) -> impl Responder {
 pub async fn live_server(tera: web::Data<Arc<Tera>>) -> impl Responder {
     let mut context: Context = Context::new();
     context.insert("title", "Live Actix");
-
     let rendered = tera
         .render("02_live_server.html", &mut context)
         .expect("unable to render");
+    HttpResponse::Ok().body(rendered)
+}
+
+pub async fn meta_tags(tera: web::Data<Arc<Tera>>) -> impl Responder {
+    let mut context: Context = Context::new();
+    context.insert("title", "Meta Tags");
+    let rendered = tera
+        .render("03_meta_tags.html", &context)
+        .expect("unable to render the page");
     HttpResponse::Ok().body(rendered)
 }
