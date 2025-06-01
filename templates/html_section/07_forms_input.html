@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{title}}</title>
+</head>
+
+<body>
+  <h1>This is &nbsp; Form</h1>
+  <form action="/forms_input" method="post">
+    <div>
+      <label for="name">Name</label><br>
+      <input id="name" name="person_username" type="text">
+    </div>
+    <div>
+      <label for="email">Email</label><br>
+      <input id="email" name="person_email" type="email">
+    </div>
+    <div>
+      <label for="message">Message</label><br>
+      <textarea id="message" name="person_message" cols="50" rows="5"></textarea>
+    </div>
+    <div>
+      <label for="sex">Gender</label>
+      <select id="sex" name="person_gender">
+        <option value="male" value="male">Male</option>
+        <option value="female" value="female">Female</option>
+      </select>
+    </div>
+    <div>
+      <label for="likes">I Like ...</label>
+      <input id="likes" name="person_likes_bike" type="checkbox" value="Bike" />Bike
+      <input id="likes" name="person_likes_programming" type="checkbox" value="Programming" />Programming
+      <input id="likes" name="person_likes_football" type="checkbox" value="Football" />Football
+    </div>
+    <div>
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</body>
+
+</html>

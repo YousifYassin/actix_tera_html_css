@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{title}}</title>
+</head>
+
+<body>
+  <!-- Unorder list -->
+  <ul style="list-style: square;">
+    {% for num in [1, 2, 3, 4] %}
+    <li>Item {{num}}</li>
+    {% endfor %}
+  </ul>
+
+  <!-- Order list -->
+  <ol type="A">
+    {% for data in data_set %}
+    <li> item {{data}} </li>
+    {% endfor %}
+  </ol>
+
+  <!-- Nested list -->
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <ul>
+      <li> Nested Item1 </li>
+      <li> Nested Item2 </li>
+    </ul>
+    <li>Item 3</li>
+    <li>Item 4</li>
+  </ul>
+
+  <!-- Tables -->
+  <table style="width: 600px;">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Raiden</td>
+        <td>Dozer</td>
+        <td>SnipermanXP@msn.com</td>
+      </tr>
+      <tr>
+        <td>Arch</td>
+        <td>Linux</td>
+        <td>Arch@msn.com</td>
+      </tr>
+      <tr>
+        <td>Luke</td>
+        <td>Mills</td>
+        <td>luke@msn.com</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+
+</html>

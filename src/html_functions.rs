@@ -1,6 +1,7 @@
 use actix_web::{HttpResponse, Responder, web};
 use std::sync::Arc;
 use tera::{Context, Tera};
+pub mod form_lib;
 
 pub async fn home_page(tera: web::Data<Arc<Tera>>) -> impl Responder {
     let mut context: Context = Context::new();
@@ -47,4 +48,15 @@ pub async fn links_images(tera: web::Data<Arc<Tera>>) -> impl Responder {
         .render("05_links_images.html", &context)
         .expect("Unable to render the page");
     HttpResponse::Ok().body(rendered)
+}
+
+pub async fn lists_tables(tera: web::Data<Arc<Tera>>) -> impl Responder {
+    let mut context: Context = Context::new();
+    context.insert("title", "List and tables");
+    context.insert("data_set", &vec![1, 2, 3, 4]);
+
+    let page_rendered: String = tera
+        .render("06_lists_tables.html", &context)
+        .expect("Unable to render the page");
+    HttpResponse::Ok().body(page_rendered)
 }
